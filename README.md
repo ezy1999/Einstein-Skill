@@ -148,34 +148,107 @@ ranked = pipeline.rank_candidates([
 
 ### 作为 Claude Code Skill 使用
 
+**快速模式（零配置，推荐）：**
+
+将 `.claude/skills/einstein-taste/SKILL.md` 拷贝到你的 Claude Code 项目的 `.claude/skills/` 目录下即可。无需 pip install，Claude 直接读取 SKILL.md 中的品味轴定义和证据即可进行评估。
+
+```bash
+# 拷贝 skill 文件到你的项目
+mkdir -p your-project/.claude/skills/einstein-taste/
+cp .claude/skills/einstein-taste/SKILL.md your-project/.claude/skills/einstein-taste/
+```
+
+然后在 Claude Code 中直接说：
+- "用爱因斯坦的品味评估一下量子引力理论"
+- "Einstein would think about this unified approach?"
+- "帮我用简单性和统一性原则分析这个方案"
+
+**完整模式（Python API）：**
+
 ```python
 from einstein_taste.skills.taste_skill import EinsteinTasteSkill
 
 skill = EinsteinTasteSkill()
-result = skill.evaluate_taste(
-    "通过广义协变性实现的量子引力理论",
-    cutoff_year=1950
-)
+result = skill.evaluate_taste("通过广义协变性实现的量子引力理论", cutoff_year=1950)
 ```
 
-## 理解输出
+## 示例与输出
+
+### 示例1：评估统一场论（科研场景）
+
+**输入：** "通过黎曼几何统一引力和电磁力的理论"（截止年份：1930）
 
 ```
 EINSTEIN RESEARCH TASTE EVALUATION
-==================================================================
-Candidate: 统一引力和电磁力的几何框架...
-Cutoff Year: 1930
-Overall Score: +0.522 (confidence: 0.50)
+═══════════════════════════════════
+Candidate: 通过黎曼几何统一引力和电磁力的理论
+Cutoff Year: 1930 | Period: quantum_debates
+Overall Score: +0.78 (confidence: 0.82)
 
 --- Taste Axis Scores ---
-  unity           +1.000 (conf: 0.70) [EVIDENCE]    <-- 有证据支持
-  invariance      +1.000 (conf: 0.70) [EVIDENCE]
-  physical_reality -0.100 (conf: 0.30) [INFERRED]   <-- 模型推断
+  unity              +0.95 (conf: 0.95) [EVIDENCE]
+    爱因斯坦1925-1955年一直追求这个方向。Pais (1982)。
+  invariance         +0.90 (conf: 0.90) [EVIDENCE]
+    几何框架自然满足广义协变性。Norton (1984)。
+  mathematical_beauty +0.85 (conf: 0.80) [EVIDENCE]
+    1920年后爱因斯坦转向"数学策略"。van Dongen (2010)。
+  causal_continuity  +0.70 (conf: 0.75) [EVIDENCE]
+    场论天然是局域连续的。
+  simplicity         +0.60 (conf: 0.70) [EVIDENCE]
+    几何统一减少了独立概念。Spencer演讲标准。
+  empirical_grounding +0.40 (conf: 0.60) [INFERRED]
+    需要可检验预言，但描述中未提及。
+  physical_reality   +0.30 (conf: 0.50) [INFERRED]
+    几何理论与实在论兼容但非重点。
+  thought_experiment +0.20 (conf: 0.40) [INFERRED]
+    无特定思想实验关联。
 ```
+
+### 示例2：评估哥本哈根量子力学（科研场景）
+
+**输入：** "概率性量子力学，物理性质在测量前不确定，观测者依赖的实在"（截止：1935）
+
+```
+Overall Score: -0.32 (confidence: 0.85)
+
+  physical_reality   -0.90 (conf: 0.95) [EVIDENCE]
+    直接矛盾。EPR论文 (1935)，Born书信 (1926)。
+  causal_continuity  -0.80 (conf: 0.90) [EVIDENCE]
+    违反可分离性。Howard (1985)。
+  empirical_grounding +0.60 (conf: 0.70) [EVIDENCE]
+    量子力学预言精度极高。爱因斯坦承认这点。
+  thought_experiment -0.30 (conf: 0.60) [EVIDENCE]
+    爱因斯坦的思想实验(EPR)就是为了攻击这个观点。
+```
+
+### 示例3：日常决策——"该走统一路线还是多元化？"
+
+```
+Applying Einstein's taste to career strategy:
+  unity         +0.90 — 爱因斯坦强烈偏好统一追求。他花30年做一个统一理论。
+  simplicity    +0.70 — 一条路 = 更简单的人生结构。
+  empirical_grounding +0.50 — 但必须检验：统一路线真的可行吗？
+
+结论：爱因斯坦的品味强烈支持统一路线——但前提是要有"经验基础"
+（现实可行性）。他会说：追求统一，但别自欺欺人。
+```
+
+### 示例4：方法论选择——"该用简单模型还是复杂模型？"
+
+```
+  simplicity    +0.95 — "尽可能简单，但不能更简单了。" Spencer演讲 (1933)。
+  empirical_grounding +0.70 — 但简单模型必须能解释数据。
+  mathematical_beauty +0.60 — 简单往往更优雅。
+
+结论：从简单模型开始。只在数据迫使你时才增加复杂性。
+```
+
+### 理解输出标记
 
 - **[EVIDENCE]** = 有具体历史来源支持的评分
 - **[INFERRED]** = 模型推断，无直接证据
 - **confidence** = 支持证据的充分程度 (0.0-1.0)
+- **Overall Score** 范围 -1.0（强烈冲突）到 +1.0（高度契合）
 
 ## 项目结构
 
