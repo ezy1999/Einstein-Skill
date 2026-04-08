@@ -1,0 +1,198 @@
+[
+  {
+    "paperId": "fae9efb5274e99e75a412984a52d7ce2954f8e8a",
+    "title": "Understanding the various scientific theories in the history of science",
+    "year": 2024,
+    "citationCount": 1,
+    "openAccessPdf": {
+      "url": "",
+      "status": "CLOSED",
+      "license": null,
+      "disclaimer": "Notice: The following paper fields have been elided by the publisher: {'abstract'}. Paper or abstract available at https://api.unpaywall.org/v2/10.1007/s43539-024-00135-2?email=<INSERT_YOUR_EMAIL> or https://doi.org/10.1007/s43539-024-00135-2, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+    },
+    "authors": [
+      {
+        "authorId": "2308073884",
+        "name": "Jun-Young Oh"
+      }
+    ],
+    "abstract": null
+  },
+  {
+    "paperId": "976c723cca4fa81cc8e93b623b28082110ff2a1f",
+    "title": "A Study on Einstein′s Methodology of Science",
+    "year": 2006,
+    "citationCount": 0,
+    "openAccessPdf": {
+      "url": "",
+      "status": null,
+      "license": null
+    },
+    "authors": [
+      {
+        "authorId": "52538138",
+        "name": "Jiang Shi-qiang"
+      }
+    ],
+    "abstract": null
+  },
+  {
+    "paperId": "6501df5438855e6fa50fa5f391e6f96cdd28052c",
+    "title": "Philosophy and Einstein's Theoretical Creativity",
+    "year": 2003,
+    "citationCount": 0,
+    "openAccessPdf": {
+      "url": "",
+      "status": null,
+      "license": null
+    },
+    "authors": [
+      {
+        "authorId": "2080997932",
+        "name": "Chen Guo-you"
+      }
+    ],
+    "abstract": null
+  },
+  {
+    "paperId": "74d284049b174529edb54bebd4d781a29be0eda5",
+    "title": "A probe into the scientific aethetics of Einstein",
+    "year": 2002,
+    "citationCount": 0,
+    "openAccessPdf": {
+      "url": "",
+      "status": null,
+      "license": null
+    },
+    "authors": [
+      {
+        "authorId": "1412752285",
+        "name": "Cheng Min-zhi"
+      }
+    ],
+    "abstract": null
+  },
+  {
+    "paperId": "1d4f1ea00b242a48dfa8b7673379817bacab34b6",
+    "title": "Einstein's scientific ideas and methods",
+    "year": 2005,
+    "citationCount": 0,
+    "openAccessPdf": {
+      "url": "",
+      "status": null,
+      "license": null
+    },
+    "authors": [
+      {
+        "authorId": "1410576115",
+        "name": "Luo Wen-juan"
+      }
+    ],
+    "abstract": null
+  },
+  {
+    "paperId": "1d24bed8206f08f8d3f4f056403c556886374319",
+    "title": "Pierre Duhem's rejection of special relativity.",
+    "year": 2025,
+    "citationCount": 0,
+    "openAccessPdf": {
+      "url": "",
+      "status": null,
+      "license": null,
+      "disclaimer": "Notice: The following paper fields have been elided by the publisher: {'abstract'}. Paper or abstract available at https://api.unpaywall.org/v2/10.1016/j.shpsa.2025.06.002?email=<INSERT_YOUR_EMAIL> or https://doi.org/10.1016/j.shpsa.2025.06.002, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+    },
+    "authors": [
+      {
+        "authorId": "2368608253",
+        "name": "Miguel Agustín Aguilar Sandoval"
+      }
+    ],
+    "abstract": null
+  },
+  {
+    "paperId": "e9d9eaa849c7b35f810ee84ba44a5bd131866edc",
+    "title": "On Einstein's Thought of Logical Simplicity and its Origin",
+    "year": 2012,
+    "citationCount": 0,
+    "openAccessPdf": {
+      "url": "",
+      "status": null,
+      "license": null
+    },
+    "authors": [
+      {
+        "authorId": "115396239",
+        "name": "Zhang Zeng-yi"
+      }
+    ],
+    "abstract": null
+  },
+  {
+    "paperId": "62dea9d023fac28fedb4e8b4afae518041b46e32",
+    "title": "Philosophical Problems of the Internal and External Worlds: Essays on the Philosophy of Adolf Grunbaum",
+    "year": 1994,
+    "citationCount": 45,
+    "openAccessPdf": {
+      "url": "",
+      "status": null,
+      "license": null
+    },
+    "authors": [
+      {
+        "authorId": "2109845",
+        "name": "J. Earman"
+      },
+      {
+        "authorId": "102080097",
+        "name": "A. Janis"
+      },
+      {
+        "authorId": "2757714",
+        "name": "Gerald J. Massey"
+      },
+      {
+        "authorId": "2680816",
+        "name": "N. Rescher"
+      }
+    ],
+    "abstract": null
+  },
+  {
+    "paperId": "04ed5e8ba1d0916b145216dc0f2fbd52c2055610",
+    "title": "Dirac’s Refined Unification Of Quantum Mechanics And Special Relativity: An Intertheoretic Context",
+    "year": 2022,
+    "citationCount": 1,
+    "openAccessPdf": {
+      "url": "https://teorievedy.flu.cas.cz/index.php/tv/article/download/518/570",
+      "status": "GOLD",
+      "license": "CCBY",
+      "disclaimer": "Notice: Paper or abstract available at https://api.unpaywall.org/v2/10.46938/tv.2022.518?email=<INSERT_YOUR_EMAIL> or https://doi.org/10.46938/tv.2022.518, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+    },
+    "authors": [
+      {
+        "authorId": "101736106",
+        "name": "R. M. Nugayev (Nugaev)"
+      }
+    ],
+    "abstract": "One of the key episodes of history of modern physics – Paul Dirac’s startling contrivance of the relativistic theory of the electron – is elicited in the context of lucid epistemological model of mature theory change. The peculiar character of Dirac’s synthesis of special relativity and quantum mechanics is revealed by comparison with Einstein’s sophisticated methodology of the General Relativity contrivance. The subtle structure of Dirac’s scientific research program and first and foremost the odd principles that put up its powerful heuristics is scrutinized with special emphasis on the highly controversial tenet of “mathematical beauty.” It is contended that despite the relentless Dirac’s remarks denigrating the controversial role of philosophy one can trace its indirect influence through Arthur Eddington’s and Hermann Weyl’s whimsical mathematical models. Accordingly, the milestones of Dirac’s research programme realization in the distinctive context of the applied epistemological doctrine are indicated."
+  },
+  {
+    "paperId": "ecf01ded3a2c2db85e41fb979ae064ffe3caba6f",
+    "title": "Problems of empiricism: Name Index",
+    "year": 1981,
+    "citationCount": 213,
+    "openAccessPdf": {
+      "url": "",
+      "status": "CLOSED",
+      "license": null,
+      "disclaimer": "Notice: The following paper fields have been elided by the publisher: {'abstract'}. Paper or abstract available at https://api.unpaywall.org/v2/10.1017/CBO9781139171588?email=<INSERT_YOUR_EMAIL> or https://doi.org/10.1017/CBO9781139171588, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+    },
+    "authors": [
+      {
+        "authorId": "8347156",
+        "name": "P. Feyerabend"
+      }
+    ],
+    "abstract": null
+  }
+]

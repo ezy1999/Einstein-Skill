@@ -17,6 +17,7 @@ venv/
 *.ipynb_checkpoints
 .DS_Store
 Thumbs.db
-einstein_taste/data/raw/*.json
-einstein_taste/data/processed/*.json
+# Keep raw and processed data in repo for reproducibility
+# einstein_taste/data/raw/*.json
+# einstein_taste/data/processed/*.json
 einstein_taste/data/embeddings/*.json

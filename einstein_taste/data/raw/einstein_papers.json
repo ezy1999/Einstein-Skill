@@ -1,0 +1,72 @@
+[
+  {
+    "title": "On a Heuristic Point of View Concerning the Production and Transformation of Light",
+    "year": 1905,
+    "journal": "Annalen der Physik",
+    "volume": "17",
+    "topic": "photoelectric_effect",
+    "significance": "Nobel Prize work",
+    "taste_relevance": "Shows Einstein's willingness to challenge established wave theory of light; quantum hypothesis applied to radiation"
+  },
+  {
+    "title": "On the Movement of Small Particles Suspended in Stationary Liquids Required by the Molecular-Kinetic Theory of Heat",
+    "year": 1905,
+    "journal": "Annalen der Physik",
+    "volume": "17",
+    "topic": "brownian_motion",
+    "significance": "Confirmed molecular reality",
+    "taste_relevance": "Demonstrates taste for connecting statistical mechanics to observable phenomena"
+  },
+  {
+    "title": "On the Electrodynamics of Moving Bodies",
+    "year": 1905,
+    "journal": "Annalen der Physik",
+    "volume": "17",
+    "topic": "special_relativity",
+    "significance": "Foundation of special relativity",
+    "taste_relevance": "Motivated by aesthetic dissatisfaction with asymmetry in electromagnetic theory"
+  },
+  {
+    "title": "Does the Inertia of a Body Depend Upon Its Energy Content?",
+    "year": 1905,
+    "journal": "Annalen der Physik",
+    "volume": "18",
+    "topic": "mass_energy_equivalence",
+    "significance": "E=mc^2",
+    "taste_relevance": "Exemplifies drive toward unity - connecting mass and energy"
+  },
+  {
+    "title": "The Foundation of the General Theory of Relativity",
+    "year": 1916,
+    "journal": "Annalen der Physik",
+    "volume": "49",
+    "topic": "general_relativity",
+    "significance": "Complete GR theory",
+    "taste_relevance": "Culmination of invariance principle - general covariance requirement"
+  },
+  {
+    "title": "Cosmological Considerations on the General Theory of Relativity",
+    "year": 1917,
+    "journal": "Sitzungsberichte der Preussischen Akademie",
+    "topic": "cosmology",
+    "significance": "First application of GR to cosmology",
+    "taste_relevance": "Shows unity drive - applying GR to the universe as a whole"
+  },
+  {
+    "title": "Can Quantum-Mechanical Description of Physical Reality Be Considered Complete?",
+    "year": 1935,
+    "journal": "Physical Review",
+    "volume": "47",
+    "topic": "EPR_paradox",
+    "significance": "EPR paper, quantum foundations",
+    "taste_relevance": "Clearest expression of realism and locality commitments"
+  },
+  {
+    "title": "The Meaning of Relativity",
+    "year": 1922,
+    "journal": "Princeton University Press (book)",
+    "topic": "relativity_exposition",
+    "significance": "Einstein's own exposition of relativity",
+    "taste_relevance": "Shows how Einstein organized and valued different aspects of his theories"
+  }
+]

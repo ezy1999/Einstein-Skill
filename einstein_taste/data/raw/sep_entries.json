@@ -1,0 +1,41 @@
+[
+  {
+    "entry_id": "einstein-philscience",
+    "url": "https://plato.stanford.edu/entries/einstein-philscience/",
+    "preamble": "Albert Einstein (1879–1955) is well known as the most prominent\nphysicist of the twentieth century. His contributions to\ntwentieth-century philosophy of science, though of comparable\nimportance, are less well known. Einstein’s own philosophy of\nscience is an original synthesis of elements drawn from sources as\ndiverse as neo-Kantianism, conventionalism, and logical empiricism,\nits distinctive feature being its novel blending of realism with a\nholist, underdeterminationist form of conventionalism. Of special note\nis the manner in which Einstein’s philosophical thinking was\ndriven by and contributed to the solution of problems first\nencountered in his work in physics. Equally significant are\nEinstein’s relations with and influence on other prominent\ntwentieth-century philosophers of science, including Moritz Schlick,\nHans Reichenbach, Ernst Cassirer, Philipp Frank, Henri Bergson,\nÉmile Meyerson (see Russo-Krauss and Laino 2024).",
+    "sections": [
+      "1. Introduction: Was Einstein an Epistemological “Opportunist”?",
+      "2. Theoretical Holism: The Nature and Role of Conventions in Science",
+      "3. Simplicity and Theory Choice",
+      "4. Univocalness in the Theoretical Representation of Nature",
+      "5. Realism and Separability",
+      "6. The Principle Theories—Constructive Theories Distinction",
+      "7. Conclusion: Albert Einstein: Philosopher-Physicist",
+      "BibliographyPrimary Literature: Einstein’s WorkSecondary Literature",
+      "Primary Literature: Einstein’s Work",
+      "Secondary Literature",
+      "Academic Tools",
+      "Other Internet Resources",
+      "Related Entries"
+    ]
+  },
+  {
+    "entry_id": "qt-epr",
+    "url": "https://plato.stanford.edu/entries/qt-epr/",
+    "preamble": "In the May 15, 1935 issue ofPhysical ReviewAlbert Einstein\nco-authored a paper with his two postdoctoral research associates at\nthe Institute for Advanced Study, Boris Podolsky and Nathan Rosen. The\narticle was entitled “Can Quantum Mechanical Description of\nPhysical Reality Be Considered Complete?” (Einsteinet\nal.1935). Generally referred to as “EPR”, this paper\nquickly became a centerpiece in debates over the interpretation of\nquantum theory, debates that continue today. Ranked by impact, EPR is\namong the top ten of all papers ever published inPhysical\nReviewjournals. Due to its role in the development of quantum\ninformation theory, it is also near the top in their list of currently\n“hot“ papers. The paper features a striking case where two\nquantum systems interact in such a way as to link both their spatial\ncoordinates in a certain direction and also their linear momenta (in\nthe same direction), even when the systems are widely separated in\nspace. As a result of this “entanglement”, determining\neither position or momentum for one system would fix (respectively)\nthe position or the momentum of the other. EPR prove a general lemma\nconnecting such strict correlations between spatially separated\nsystems to the possession of definite values. On that basis they argue\nthat one cannot maintain both an intuitive condition of local action\nand the completeness of the quantum description by means of the wave\nfunction. This entry describes the lemma and argument of that 1935\npaper, considers several different versions and reactions, and\nexplores the ongoing significance of the issues raised.",
+    "sections": [
+      "1. Can Quantum Mechanical Description of Physical Reality Be Considered Complete?1.1 Setting and prehistory1.2 The argument in the text1.3 Einstein’s versions of the argument",
+      "1.1 Setting and prehistory",
+      "1.2 The argument in the text",
+      "1.3 Einstein’s versions of the argument",
+      "2. A popular form of the argument: Bohr’s response",
+      "3. Development of EPR3.1 Spin and The Bohm version3.2 Bell and beyond",
+      "3.1 Spin and The Bohm version",
+      "3.2 Bell and beyond",
+      "Bibliography",
+      "Academic Tools",
+      "Other Internet Resources",
+      "Related Entries"
+    ]
+  }
+]

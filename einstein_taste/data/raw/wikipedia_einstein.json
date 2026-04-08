@@ -1,0 +1,44 @@
+[
+  {
+    "title": "Albert Einstein",
+    "extract": "Albert Einstein was a German-born theoretical physicist best known for developing the theory of relativity. Einstein also made important contributions to quantum theory. His mass–energy equivalence formula E = mc2, which arises from special relativity, has been called \"the world's most famous equation\". He received the 1921 Nobel Prize in Physics for \"his services to theoretical physics, and especially for his discovery of the law of the photoelectric effect\".",
+    "description": "German-born theoretical physicist (1879–1955)",
+    "source_url": "https://en.wikipedia.org/wiki/Albert_Einstein"
+  },
+  {
+    "title": "Einstein–Podolsky–Rosen paradox",
+    "extract": "The Einstein–Podolsky–Rosen (EPR) paradox is a thought experiment proposed by physicists Albert Einstein, Boris Podolsky and Nathan Rosen, which argues that the description of physical reality provided by quantum mechanics is incomplete. In a 1935 paper titled \"Can Quantum-Mechanical Description of Physical Reality be Considered Complete?\", they argued for the existence of \"elements of reality\" that were not part of quantum theory, and speculated that it should be possible to construct a theory containing these hidden variables. Resolutions of the paradox have important implications for the interpretation of quantum mechanics.",
+    "description": "Historical critique of quantum mechanics",
+    "source_url": "https://en.wikipedia.org/wiki/Einstein%E2%80%93Podolsky%E2%80%93Rosen_paradox"
+  },
+  {
+    "title": "Annus mirabilis papers",
+    "extract": "The annus mirabilis papers are four papers that Albert Einstein published in the scientific journal Annalen der Physik in 1905. As major contributions to the foundation of modern physics, these scientific publications were the ones for which he gained fame among physicists. They revolutionized science's understanding of the fundamental concepts of space, time, mass, and energy.The first paper explained the photoelectric effect, which established the energy of the light quanta , and was the only specific discovery mentioned in the citation awarding Einstein the 1921 Nobel Prize in Physics.\nThe second paper explained Brownian motion, which established the Einstein relation  and compelled physicists to accept the existence of atoms.\nThe third paper introduced Einstein's special theory of relativity, which proclaims the constancy of the speed of light  and derives the Lorentz transformations. Einstein also examined relativistic aberration and the transverse Doppler effect.\nThe fourth, a consequence of special relativity, developed the principle of mass–energy equivalence, expressed in the equation  and which led to the discovery and use of nuclear power decades later.",
+    "description": "Published papers of Albert Einstein in 1905",
+    "source_url": "https://en.wikipedia.org/wiki/Annus_mirabilis_papers"
+  },
+  {
+    "title": "Einstein field equations",
+    "extract": "In the general theory of relativity, the Einstein field equations relate the geometry of spacetime to the distribution of matter within it.",
+    "description": "Field-equations in general relativity",
+    "source_url": "https://en.wikipedia.org/wiki/Einstein_field_equations"
+  },
+  {
+    "title": "Unified field theory",
+    "extract": "In physics, a Unified Field Theory (UFT) is a type of field theory that allows all fundamental forces of nature, including gravity, and all elementary particles to be written in terms of a single physical field. According to quantum field theory, particles are themselves the quanta of fields. Different fields in physics include vector fields such as the electromagnetic field, spinor fields whose quanta are fermionic particles such as electrons, and tensor fields such as the metric tensor field that describes the shape of spacetime and gives rise to gravitation in general relativity. Unified field theories attempt to organize these fields into a single mathematical structure.",
+    "description": "Field theory in physics that aims to unify the fundamental forces and particles",
+    "source_url": "https://en.wikipedia.org/wiki/Unified_field_theory"
+  },
+  {
+    "title": "Photoelectric effect",
+    "extract": "The photoelectric effect is the emission of electrons from a material caused by electromagnetic radiation such as ultraviolet light. Electrons emitted in this manner are called photoelectrons. The phenomenon is studied in condensed matter physics, solid state, and quantum chemistry to draw inferences about the properties of atoms, molecules and solids. The effect has found use in electronic devices specialized for light detection and precisely timed electron emission.",
+    "description": "Emission of electrons when electromagnetic radiation hits a material",
+    "source_url": "https://en.wikipedia.org/wiki/Photoelectric_effect"
+  },
+  {
+    "title": "Brownian motion",
+    "extract": "Brownian motion is the random motion of particles suspended in a medium. The traditional mathematical formulation of Brownian motion is that of the Wiener process, which is often called Brownian motion, even in mathematical sources.",
+    "description": "Random motion of particles suspended in a fluid",
+    "source_url": "https://en.wikipedia.org/wiki/Brownian_motion"
+  }
+]
