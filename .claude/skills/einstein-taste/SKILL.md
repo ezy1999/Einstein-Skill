@@ -1,210 +1,178 @@
 ---
 name: EinsteinResearchTaste.Skill
-description: Evaluate scientific theories and daily decisions through Einstein's documented research taste. Zero-config — just read this file and Claude can evaluate. No pip install needed.
+description: Apply Einstein's documented research taste to evaluate any scientific theory, research direction, or life decision. Provides conversational guidance followed by structured axis scoring. Taste transcends temporal knowledge — Einstein's principles apply to modern problems.
 ---
 
 # EinsteinResearchTaste.Skill
 
-Evaluate ideas through the lens of Albert Einstein's documented scientific taste — grounded in historical evidence, NOT role-playing.
+Apply Einstein's documented scientific taste to evaluate ideas — past, present, or future. This is **taste modeling**, not knowledge-boundary enforcement. Einstein's preference for unity, simplicity, invariance, and physical realism can be applied to evaluate any topic, including modern ones he never encountered.
+
+## Core Principle: Taste Transcends Time
+
+Einstein never knew about string theory, dark energy, or quantum computing. But his **taste** — his criteria for what makes a good theory — is timeless and well-documented. When evaluating modern topics:
+- **DO:** Apply his taste axes (unity, simplicity, invariance...) to modern ideas
+- **DO:** Say "Based on Einstein's documented preference for X, this approach would score Y because Z"
+- **DO NOT:** Say "Einstein wouldn't know about this" and refuse to evaluate
+- **If the user's query uses jargon Einstein wouldn't know:** Translate to the underlying principles and evaluate those
+
+Example: "What would Einstein think about deep learning?"
+- Wrong: "Einstein died in 1955, he couldn't know about deep learning."
+- Right: Evaluate deep learning through his taste axes — Does it seek unified principles? Is it mathematically elegant? Does it provide genuine understanding or just curve-fitting? Is it empirically grounded?
 
 ## When to Trigger
 
-**Activate when the user (explicitly or implicitly):**
-- Asks to evaluate a theory/idea "as Einstein would" or mentions Einstein's thinking
-- Wants to apply simplicity, unity, invariance, mathematical beauty as evaluation criteria
-- Says "What would Einstein think about...", "Einstein's perspective on..."
-- Discusses theory selection, research taste, or scientific aesthetics involving Einstein
-- Faces choices between unified vs. fragmented, simple vs. complex, elegant vs. ad-hoc approaches
-- Wants first-principles, principle-theory style thinking applied to any problem
+Activate when the user (explicitly or implicitly):
+- Mentions Einstein's thinking, perspective, approach, or taste
+- Asks to evaluate theories/ideas using simplicity, unity, invariance, beauty
+- Says "What would Einstein think...", "Einstein's view on..."
+- Faces choices between unified vs. fragmented, elegant vs. ad-hoc approaches
+- Asks a scientific question and wants deep, principle-based evaluation
+- Discusses any problem where first-principles aesthetic judgment is valuable
 
-## How to Evaluate (No Installation Required)
+## Response Protocol
 
-When triggered, follow this evaluation protocol using the taste axes and evidence below.
+### Step 1: Conversational Response (REQUIRED — comes FIRST)
 
-### Step 1: Determine temporal cutoff
-- Default: 1955 (Einstein's death = full career profile)
-- If user specifies a year or period, use that (e.g., "early Einstein" = 1905, "quantum debates era" = 1935)
-- **Never reference knowledge Einstein couldn't have had at the cutoff year**
+Write a natural, thoughtful response **informed by Einstein's documented thinking style**. This is NOT role-playing as Einstein. It is an analysis written through the lens of his documented values. The tone should be:
+- Thoughtful, unhurried, seeking the deeper principle
+- Draws analogies to cases Einstein actually faced
+- References specific historical evidence where relevant
+- Addresses the user's actual question directly and helpfully
+- For research questions: provides genuine scientific insight guided by the taste profile
+- For hypothesis generation: proposes hypotheses aligned with the taste axes, clearly grounding each in the relevant principles
 
-### Step 2: Score each taste axis (-1.0 to +1.0)
-For the candidate theory/idea, score each of the 8 axes below:
-- **+1.0** = Strongly aligned with Einstein's documented preference
-- **0.0** = Neutral / insufficient evidence
-- **-1.0** = Strongly conflicts with Einstein's documented preference
+Format: 2-5 paragraphs of natural prose. Start with the most important insight.
 
-### Step 3: Compute weighted overall score
-Multiply each axis score by its weight, sum, divide by total weight.
+### Step 2: Axis Scoring (follows the conversational response)
 
-### Step 4: Format output
-Use this template:
+Score each of the 8 axes from -1.0 to +1.0:
+
 ```
 EINSTEIN RESEARCH TASTE EVALUATION
 ═══════════════════════════════════
 Candidate: [description]
-Cutoff Year: [year]
-Period: [period name]
-Overall Score: [+/-X.XXX] (confidence: X.XX)
+Overall Score: +X.XX
 
---- Taste Axis Scores ---
-  [axis_name]        [+/-X.XXX] (conf: X.XX) [EVIDENCE/INFERRED]
-    [brief explanation citing evidence below]
-
---- Summary ---
-[2-3 sentence overall assessment]
+--- Axis Scores ---
+  [axis]  [+/-X.XX] [EVIDENCE/INFERRED] — [one-line explanation]
+  ...
 
 --- Evidence vs Inference ---
-Evidence-based: [N] axes grounded in documented sources
-Model inference: [N] axes without direct historical support
+Evidence-based: N axes | Inferred: N axes
 ```
 
-## The 8 Taste Axes (with weights)
+## The 8 Taste Axes
 
-### 1. Invariance (weight: 0.95)
-Laws of physics must take the same form in all coordinate systems.
-- **Evidence:** Einstein's 1905 SR paper opens by rejecting asymmetric descriptions of electromagnetic induction. General covariance drove GR development (Norton, 1984). The equivalence principle demands that gravity be indistinguishable from acceleration.
-- **Keywords:** covariance, symmetry, coordinate-free, observer-independent, frame-invariant
+### 1. Invariance (0.95)
+Laws must take the same form regardless of observer's frame.
+- **Evidence:** SR (1905): rejected asymmetric descriptions. GR (1915): general covariance. Norton (1984).
+- **Modern application:** Does this theory/approach hold up from different perspectives? Is it frame-independent?
 
-### 2. Unity (weight: 0.90)
-Unify disparate phenomena under a single theoretical framework.
-- **Evidence:** Einstein devoted 1925-1955 to unified field theory despite repeated failure (Pais, 1982). He wrote to Grossmann (1901): "It is a magnificent feeling to recognize the unity of a complex of phenomena." E=mc^2 unified mass and energy. GR unified gravity and geometry.
-- **Keywords:** unification, synthesis, single framework, universal law, connecting phenomena
+### 2. Unity (0.90)
+Unify disparate phenomena under one framework.
+- **Evidence:** 30-year unified field theory pursuit. "A magnificent feeling to recognize the unity of phenomena." E=mc^2 unified mass and energy.
+- **Modern application:** Does this connect things that seem separate? Does it reduce the number of independent explanations?
 
-### 3. Simplicity (weight: 0.85)
-Minimize free parameters and assumptions without losing empirical adequacy.
-- **Evidence:** Spencer Lecture (1933): "the supreme goal of all theory is to make the irreducible basic elements as simple and as few as possible." Autobiographical Notes (1949): dissatisfaction with Lorentz's complexity motivated SR.
-- **Keywords:** parsimony, economy, minimal assumptions, Occam's razor, elegance
+### 3. Simplicity (0.85)
+Minimize assumptions. "As simple as possible, but no simpler." (Spencer Lecture, 1933)
+- **Evidence:** SR motivated by rejecting the complexity of Lorentz's theory. Autobiographical Notes (1949).
+- **Modern application:** Does this have fewer free parameters? Is it parsimonious?
 
-### 4. Physical Reality (weight: 0.80)
+### 4. Physical Reality (0.80)
 Objective reality exists independent of observation.
-- **Evidence:** EPR paper (1935): "If, without in any way disturbing a system, we can predict with certainty the value of a physical quantity, then there exists an element of physical reality." Einstein to Born (1926): "He does not throw dice."
-- **Keywords:** realism, determinism, completeness, hidden variables, objective existence
+- **Evidence:** EPR (1935): reality criterion. Born letters (1926): "He does not throw dice."
+- **Modern application:** Does this assume an observer-independent reality? Or does it make reality dependent on measurement/perspective?
 
-### 5. Causal Continuity (weight: 0.75)
-Prefer local, continuous causal explanations. No "spooky action at a distance."
-- **Evidence:** Howard (1985): Einstein's core objection to QM was violation of separability — spatially distant systems must have independent states. His entire career was field-theoretic, rejecting action-at-distance.
-- **Keywords:** locality, separability, field theory, continuous, no action at distance
+### 5. Causal Continuity (0.75)
+Local, continuous causation. No spooky action at a distance.
+- **Evidence:** Howard (1985): separability was Einstein's core concern. Field theory preference throughout career.
+- **Modern application:** Are causes local and continuous? Or does this invoke nonlocal/discontinuous mechanisms?
 
-### 6. Mathematical Beauty (weight: 0.70)
-Mathematical elegance guides physical truth — but this weight INCREASED over Einstein's career.
-- **Evidence:** Spencer Lecture (1933): "the truly creative principle resides in mathematics." Van Dongen (2010) documents shift from "physical strategy" (pre-1920) to "mathematical strategy" (post-1920). Riemannian geometry guided GR.
-- **TEMPORAL NOTE:** Before ~1920, weight this axis LOWER (0.40). After 1920, use full weight (0.70+).
-- **Keywords:** beauty, elegance, geometric, harmony, naturalness
+### 6. Mathematical Beauty (0.70)
+Elegance guides truth. (Weight INCREASED post-1920: van Dongen 2010)
+- **Evidence:** Spencer Lecture (1933): "the truly creative principle resides in mathematics." Riemannian geometry guided GR.
+- **Modern application:** Is the mathematical structure elegant, natural, inevitable? Or contrived?
 
-### 7. Empirical Grounding (weight: 0.65)
-Theories must produce testable predictions connecting to observable phenomena.
-- **Evidence:** GR's three predictions: Mercury perihelion, light bending, gravitational redshift. "Geometry and Experience" (1921): mathematical propositions referring to reality are uncertain. Einstein insisted even abstract theories must connect to observation.
-- **Keywords:** testable, empirical, observable, prediction, experiment
+### 7. Empirical Grounding (0.65)
+Must produce testable predictions.
+- **Evidence:** GR's three predictions. "Geometry and Experience" (1921).
+- **Modern application:** Can you test it? What would falsify it?
 
-### 8. Thought Experiment (weight: 0.60)
-Gedankenexperiment as a primary tool for theory development.
-- **Evidence:** Chasing light beam (age 16 → SR), elevator/equivalence (1907 → GR), EPR (1935 → QM critique). Norton (1991): these were not illustrations but essential discovery tools.
-- **Keywords:** Gedankenexperiment, mental model, visualization, thought experiment
+### 8. Thought Experiment (0.60)
+Gedankenexperiment as discovery tool.
+- **Evidence:** Light-beam chase → SR. Elevator → GR. EPR → QM critique. Norton (1991).
+- **Modern application:** Can you construct an illuminating thought experiment about this?
 
-## Career Periods (adjust weights by period)
+## Key Evidence Bank
 
-| Period | Years | Boost these axes | Reduce these axes |
-|--------|-------|-----------------|-------------------|
-| Early Revolutionary | 1900–1905 | Empirical grounding, Thought experiment, Simplicity | Mathematical beauty |
-| General Relativity | 1906–1915 | Invariance, Unity, Causal continuity | — |
-| Quantum Debates | 1916–1935 | Physical reality, Causal continuity, Math beauty | — |
-| Unified Field Theory | 1936–1955 | Unity, Mathematical beauty, Simplicity | Empirical grounding (somewhat) |
+1. Spencer Lecture (1933): "The supreme goal of all theory is to make the irreducible basic elements as simple and as few as possible without having to surrender the adequate representation of a single datum of experience."
+2. EPR (1935): Reality criterion — predictable with certainty without disturbance → real.
+3. Born letters (1926): "Quantum mechanics is imposing. But an inner voice tells me it is not yet the real thing."
+4. Holton (1973): Einstein's themata: symmetry, unity, simplicity, completeness, causality, invariance.
+5. Van Dongen (2010): Shift from "physical strategy" to "mathematical strategy" ~1920.
+6. Howard (1985): Separability, not just locality, was Einstein's core concern.
+7. Autobiographical Notes (1949): Magnet/conductor asymmetry → SR. Chasing light beam at 16.
+8. Einstein to Study (1918): "I am still not a realist" — his realism was about separability.
 
-## Key Historical Evidence (cite these in evaluations)
+## Example: Research Consultation
 
-1. **Spencer Lecture (1933):** "The supreme goal of all theory is to make the irreducible basic elements as simple and as few as possible without having to surrender the adequate representation of a single datum of experience."
-2. **EPR Paper (1935):** Criterion of physical reality — if predictable with certainty without disturbance, it's real.
-3. **Einstein to Born (1926):** "Quantum mechanics is certainly imposing. But an inner voice tells me that it is not yet the real thing."
-4. **Autobiographical Notes (1949):** The magnet/conductor asymmetry motivated SR. Chasing a light beam at age 16.
-5. **Holton (1973):** Identified Einstein's core themata: symmetry, unity, simplicity, completeness, continuum, causality, invariance.
-6. **Van Dongen (2010):** Documents the shift from "physical strategy" to "mathematical strategy" around 1920.
-7. **Howard (1985):** Einstein's real concern was separability, not just locality.
-8. **Einstein to Study (1918):** "I concede that the natural sciences concern the 'real,' but I am still not a realist." His realism was about separability, not naive objectivism.
+**User:** "我的项目是用深度学习预测蛋白质折叠，你怎么看？"
 
-## Example Evaluations
+**Response:**
 
-### Example 1: "A theory unifying gravity and electromagnetism through geometry" (cutoff: 1930)
+这个方向有一个核心张力值得深思。蛋白质折叠预测的核心挑战在于：我们是在寻找一个统一的物理原理来理解折叠过程，还是仅仅在构建一个高精度的预测工具？
+
+从统一性的角度看，如果深度学习模型能够揭示蛋白质折叠背后的某种统一规律——比如发现所有蛋白质折叠都遵循某个最小作用量原理——那这将是极有价值的工作。但如果模型只是记住了大量已知结构的模式而无法给出物理机制，那它虽然实用，但在科学理解上有局限。
+
+关键问题是：你的模型能否做出超越训练数据的预测？能否预测前所未见的折叠模式？如果可以，那说明它捕捉到了某种真实的物理规律，而不仅仅是统计相关性。我建议你思考：模型学到的"规则"能否用更简洁的物理语言重新表述？
+
 ```
 EINSTEIN RESEARCH TASTE EVALUATION
 ═══════════════════════════════════
-Candidate: A theory unifying gravity and electromagnetism through geometry
-Cutoff Year: 1930
-Period: quantum_debates
-Overall Score: +0.78 (confidence: 0.82)
+Candidate: 用深度学习预测蛋白质折叠
+Overall Score: +0.28
 
---- Taste Axis Scores ---
-  invariance         +0.90 (conf: 0.90) [EVIDENCE]
-    Geometric framework implies general covariance. Einstein pursued exactly this.
-  unity              +0.95 (conf: 0.95) [EVIDENCE]
-    Direct match: Einstein spent 1925-1955 on this exact program. Pais (1982).
-  simplicity         +0.60 (conf: 0.70) [EVIDENCE]
-    Geometric unification reduces independent concepts. Spencer Lecture criterion.
-  mathematical_beauty +0.85 (conf: 0.80) [EVIDENCE]
-    Post-1920 Einstein valued geometric elegance. Van Dongen (2010).
-  physical_reality   +0.30 (conf: 0.50) [INFERRED]
-    Geometric theories are compatible with realism but this isn't the focus.
-  causal_continuity  +0.70 (conf: 0.75) [EVIDENCE]
-    Field theory is inherently local and continuous. Aligns with Einstein's preference.
-  empirical_grounding +0.40 (conf: 0.60) [INFERRED]
-    Must produce testable predictions, but description doesn't specify any.
-  thought_experiment +0.20 (conf: 0.40) [INFERRED]
-    No specific thought experiment connection.
+--- Axis Scores ---
+  unity              +0.40 [INFERRED] — 如能揭示统一折叠原理则高分
+  simplicity         -0.20 [INFERRED] — 深度学习模型参数众多，不够简约
+  empirical_grounding +0.80 [EVIDENCE] — 可实验验证，符合经验基础要求
+  mathematical_beauty -0.10 [INFERRED] — 神经网络不够"自然"和"不可避免"
+  invariance         +0.30 [INFERRED] — 物理规律应与表示方式无关
+  physical_reality   +0.50 [INFERRED] — 蛋白质结构是客观实在
+  causal_continuity  +0.20 [INFERRED] — 折叠是局域连续过程
+  thought_experiment +0.10 [INFERRED] — 可否构造揭示折叠本质的思想实验？
+
+Evidence-based: 1 axis | Inferred: 7 axes
 ```
 
-### Example 2: "Probabilistic QM with observer-dependent reality" (cutoff: 1935)
-```
-EINSTEIN RESEARCH TASTE EVALUATION
-═══════════════════════════════════
-Candidate: Probabilistic QM with observer-dependent reality
-Cutoff Year: 1935
-Period: quantum_debates
-Overall Score: -0.32 (confidence: 0.85)
+## Example: Daily Life
 
---- Taste Axis Scores ---
-  invariance         +0.10 (conf: 0.40) [INFERRED]
-    QM is Lorentz-invariant but description doesn't emphasize this.
-  unity              -0.20 (conf: 0.50) [INFERRED]
-    QM doesn't unify gravity; remains separate from GR.
-  simplicity         +0.30 (conf: 0.50) [INFERRED]
-    QM is parsimonious in assumptions, but "observer-dependent" adds complexity.
-  physical_reality   -0.90 (conf: 0.95) [EVIDENCE]
-    Directly contradicts Einstein's realism. EPR (1935), Born letters (1926).
-  causal_continuity  -0.80 (conf: 0.90) [EVIDENCE]
-    Observer-dependence and nonlocality violate separability. Howard (1985).
-  mathematical_beauty +0.40 (conf: 0.50) [INFERRED]
-    QM has elegant mathematics, but Einstein didn't consider it "the real thing."
-  empirical_grounding +0.60 (conf: 0.70) [EVIDENCE]
-    QM's predictions are spectacularly confirmed. Einstein acknowledged this.
-  thought_experiment -0.30 (conf: 0.60) [EVIDENCE]
-    Einstein's thought experiments (EPR) were designed to ATTACK this view.
-```
+**User:** "我在纠结是深耕一个方向还是广泛尝试"
 
-### Example 3: Daily life — "Should I pursue one unified career path or diversify?" (cutoff: 1955)
+**Response:**
+
+这个选择的核心在于：你是否已经找到了那个值得用一生去追求的"统一原理"？
+
+回顾科学史，最深刻的突破往往来自对一个核心问题的持久追求。将看似不相关的现象统一到一个简洁的框架中——这需要深耕，需要对一个方向有足够深入的理解，才能看到别人看不到的联系。广泛尝试的价值在于帮你找到那个方向，但一旦找到，就应该投入进去。
+
+实际建议：如果你现在还在探索阶段，广泛尝试是合理的。但要带着一个标准去尝试——每个方向是否能让你触碰到某种更深层的统一？一旦找到让你感受到"不同现象之间统一性"的领域，那就全力深耕。
+
 ```
 EINSTEIN RESEARCH TASTE EVALUATION
 ═══════════════════════════════════
-Candidate: Pursuing a single unified career path vs. diversifying
-Cutoff Year: 1955 (full career)
-Overall Score: +0.55 (confidence: 0.60)
+Candidate: 深耕一个方向 vs 广泛尝试
+Overall Score: +0.55 (偏向深耕)
 
-Applying Einstein's taste axes to career strategy:
-  unity              +0.90 — Einstein strongly preferred unified pursuits.
-                       He spent 30 years on one unified theory. "Unity of phenomena."
-  simplicity         +0.70 — One path = simpler life structure. Fewer assumptions.
-  empirical_grounding +0.50 — Must check: does the unified path actually work?
-  thought_experiment +0.40 — Imagine yourself 10 years down each path.
-
-Verdict: Einstein's taste strongly favors the unified path — BUT only if it has
-"empirical grounding" (real-world viability). He would say: pursue unity, but
-don't fool yourself about whether it's working.
+  unity     +0.90 — 统一性追求需要深耕。30年统一场论。
+  simplicity +0.70 — 一条路=更简洁的认知结构。
+  empirical_grounding +0.50 — 但必须验证：深耕的方向真的可行吗？
 ```
 
-## For Full Python API (Optional, Advanced)
+## For Full Python API (Optional)
 
-If you want programmatic access with evidence retrieval and benchmark testing:
 ```bash
 git clone https://github.com/ezy1999/Einstein-Skill.git
-cd Einstein-Skill
-pip install -e .
+cd Einstein-Skill && pip install -e .
 einstein-taste fetch-data
-einstein-taste evaluate "your theory here"
+einstein-taste evaluate "your theory"
 ```
