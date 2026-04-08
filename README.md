@@ -1,7 +1,11 @@
-# Einstein Research Taste Modeling System
+**🌐 Language / 语言选择：** [中文（默认）](#) | [English](./docs/README_EN.md) | [日本語](./docs/README_JA.md) | [Français](./docs/README_FR.md) | [Deutsch](./docs/README_DE.md)
 
-> **Evidence-based computational modeling of Albert Einstein's scientific research taste.**
-> Evaluate, rank, and explain how Einstein would have assessed candidate scientific theories — grounded in historical evidence, not role-playing.
+---
+
+# Einstein-Skill：爱因斯坦科研品味建模系统
+
+> **基于史料证据的爱因斯坦科研品味计算建模**
+> 评估、排序和解释爱因斯坦会如何评价候选科学理论——基于历史证据，而非角色扮演。
 
 [![Python 3.10+](https://img.shields.io/badge/python-3.10%2B-blue.svg)]()
 [![Tests](https://img.shields.io/badge/tests-18%20passed-brightgreen.svg)]()
@@ -9,269 +13,204 @@
 
 ---
 
-## What Is This?
+## 这是什么？
 
-This system models Einstein's **research taste** — his documented preferences for certain kinds of scientific theories. It answers questions like:
+本系统对爱因斯坦的**科研品味（Research Taste）**进行建模——即他对不同类型科学理论的偏好。它能回答如下问题：
 
-- *"How would Einstein have evaluated quantum field theory in 1935?"*
-- *"Between hidden-variable theory and Copenhagen QM, which would Einstein prefer?"*
-- *"How did Einstein's taste for mathematical beauty evolve over his career?"*
+- *"1935年的爱因斯坦会如何评价量子场论？"*
+- *"在隐变量理论和哥本哈根量子力学之间，爱因斯坦会更倾向哪个？"*
+- *"爱因斯坦对数学美感的重视如何随职业生涯演变？"*
 
-**This is NOT role-playing.** Every evaluation is grounded in historical evidence from Einstein's published papers, letters, lectures, and scholarly analyses of his methodology. The system explicitly marks what is evidence-based vs. what is model inference.
+**这不是角色扮演。** 每一项评估都以历史证据为基础——来自爱因斯坦的发表论文、书信、演讲，以及学者对其方法论的分析。系统会明确标注哪些是基于证据的评分，哪些是模型推断。
 
-## Key Features
+## 核心特性
 
-- **8 Taste Axes** derived from historical scholarship (Holton's themata, Howard's analyses)
-- **33 Evidence Records** from primary sources (Einstein's writings) and secondary scholarship
-- **Temporal Cutoff** prevents anachronism — evaluate Einstein at any year from 1900 to 1955
-- **Evidence/Inference Separation** — every score traces back to specific historical sources
-- **RAG Pipeline** — retrieval-augmented generation grounds evaluations in real evidence
-- **6 Benchmark Cases** with difficulty stratification (easy/medium/hard)
-- **CLI + Python API + Claude Code Skill** — multiple interfaces
+| 特性 | 说明 |
+|------|------|
+| **8个品味轴** | 源自 Holton 的主题分析、Howard 的哲学研究等学术成果 |
+| **33条证据记录** | 一手史料（爱因斯坦著作）+ 二手学术分析 |
+| **时间截止机制** | 防止历史穿越，可评估1900-1955年间任意时点的爱因斯坦 |
+| **证据/推断分离** | 每个评分都追溯到具体历史来源 |
+| **RAG管道** | 检索增强生成，将评估锚定在真实证据上 |
+| **6个基准测试** | 含难度分层（简单/中等/困难） |
+| **多种接口** | CLI命令行 + Python API + Claude Code Skill |
 
-## How It Works
+## 工作原理
 
 ```
-User Query                    Evidence Store (33 records)
+用户查询                    证据库 (33条记录)
     |                               |
     v                               v
-[1. Evidence Retrieval] -----> Keyword/Semantic matching
+[1. 证据检索] ──────────> 关键词/语义匹配
     |                               |
     v                               v
-[2. LLM Evaluation]           Retrieved evidence as context
-    |                          (Claude/GPT-4 with structured prompt)
+[2. LLM评估]              检索到的证据作为上下文
+    |                     (Claude/GPT-4 结构化提示)
     v
-[3. Axis Scoring]             Per-axis scores with evidence links
-    |                          Weighted by career period
+[3. 轴评分]               每个轴的评分+证据链接
+    |                      按职业时期加权
     v
-[4. Output]                   Ranked results with explanations
-                               Evidence vs. inference clearly marked
+[4. 输出]                 排名结果+解释
+                           证据 vs 推断 清晰标注
 ```
 
-## The 8 Taste Axes
+## 8个品味轴
 
-Each axis represents a documented dimension of Einstein's scientific preferences:
+| # | 品味轴 | 权重 | 含义 | 关键证据 |
+|---|--------|------|------|---------|
+| 1 | **不变性** | 0.95 | 物理定律在所有坐标系中形式相同 | 1905狭义相对论; 1915广义相对论; Norton (1984) |
+| 2 | **统一性** | 0.90 | 将不同现象统一到单一框架 | 30年统一场论追求; Pais (1982) |
+| 3 | **简单性** | 0.85 | 以最少假设充分表达经验 | Spencer演讲 (1933); 自传笔记 (1949) |
+| 4 | **物理实在性** | 0.80 | 客观实在独立于观测存在 | EPR论文 (1935); Einstein-Born书信 |
+| 5 | **因果连续性** | 0.75 | 偏好局域、连续的因果关系 | Howard (1985) 论可分离性 |
+| 6 | **数学美感** | 0.70 | 数学优雅引导物理真理 | Spencer演讲 (1933); van Dongen (2010) |
+| 7 | **经验基础** | 0.65 | 理论必须连接可观测现象 | 广义相对论三大预言; 几何与经验 (1921) |
+| 8 | **思想实验** | 0.60 | Gedankenexperiment 作为核心方法 | 追光实验; 电梯实验; Norton (1991) |
 
-| # | Axis | Weight | What It Means | Key Evidence |
-|---|------|--------|---------------|-------------|
-| 1 | **Invariance** | 0.95 | Laws must be the same in all coordinate systems | 1905 SR paper; 1915 GR; Norton (1984) |
-| 2 | **Unity** | 0.90 | Unify disparate phenomena under one framework | 30-year unified field theory pursuit; Pais (1982) |
-| 3 | **Simplicity** | 0.85 | Minimize assumptions without losing empirical adequacy | Spencer Lecture (1933); Autobiographical Notes (1949) |
-| 4 | **Physical Reality** | 0.80 | Objective reality exists independent of observation | EPR paper (1935); Einstein-Born Letters |
-| 5 | **Causal Continuity** | 0.75 | Prefer local, continuous causation over action-at-distance | Howard (1985) on separability; field theory preference |
-| 6 | **Mathematical Beauty** | 0.70 | Mathematical elegance guides physical truth | Spencer Lecture (1933); van Dongen (2010) |
-| 7 | **Empirical Grounding** | 0.65 | Theories must connect to observable phenomena | GR predictions (1915); Geometry and Experience (1921) |
-| 8 | **Thought Experiment** | 0.60 | Gedankenexperiment as a primary methodology | Light-beam chase (age 16); elevator (1907); Norton (1991) |
+## 职业时期（时间动态）
 
-## Career Periods (Temporal Dynamics)
+爱因斯坦的品味**随时间演变**。系统按时期调整轴权重：
 
-Einstein's taste **evolved** over his career. The system adjusts axis weights per period:
+| 时期 | 年份 | 主导轴 | 变化 |
+|------|------|--------|------|
+| 早期革命 | 1900–1905 | 经验基础, 思想实验, 简单性 | 专利局时期；物理直觉主导 |
+| 广义相对论 | 1906–1915 | 不变性, 统一性, 因果连续性 | 广义协变性成为最高原则 |
+| 量子争论 | 1916–1935 | 物理实在性, 因果连续性, 数学美感 | Solvay辩论; EPR论文; 方法论转变 |
+| 统一场论 | 1936–1955 | 统一性, 数学美感, 简单性 | 数学策略主导; 日益脱离主流 |
 
-| Period | Years | Dominant Axes | What Changed |
-|--------|-------|---------------|-------------|
-| Early Revolutionary | 1900–1905 | Empirical grounding, Thought experiment, Simplicity | Patent office years; driven by physical intuition |
-| General Relativity | 1906–1915 | Invariance, Unity, Causal continuity | General covariance becomes paramount |
-| Quantum Debates | 1916–1935 | Physical reality, Causal continuity, Math beauty | Solvay debates; EPR paper; methodology shift begins |
-| Unified Field Theory | 1936–1955 | Unity, Mathematical beauty, Simplicity | Mathematical strategy dominates; increasing isolation |
+## 快速开始
 
-## Quick Start
-
-### Installation
+### 安装
 
 ```bash
-# Clone or navigate to the project
-cd EinsteinResearchTaste
-
-# Install (requires Python 3.10+)
-pip install -e ".[dev]"
-
-# Fetch historical data from online sources
-einstein-taste fetch-data
-
-# Verify installation
-einstein-taste info
+git clone https://github.com/ezy1999/Einstein-Skill.git
+cd Einstein-Skill
+pip install -e ".[dev]"       # 安装项目
+einstein-taste fetch-data      # 获取历史数据
+einstein-taste info            # 验证安装
 ```
 
-### Set Up API Key (for LLM evaluation)
+### 设置 API Key（可选，用于 LLM 评估）
 
 ```bash
-# Option 1: Environment variable
-export ANTHROPIC_API_KEY="your-key-here"
+# 方式一：环境变量
+export ANTHROPIC_API_KEY="你的密钥"
 
-# Option 2: Copy the example file
+# 方式二：复制配置文件
 cp .env.example .env
-# Then edit .env with your key
+# 编辑 .env 填入你的密钥
 ```
 
-Without an API key, you can still run the offline demo:
+没有 API Key 也能运行离线演示：
 ```bash
 python scripts/run_demo_offline.py
 ```
 
-### CLI Usage
+### 命令行使用
 
 ```bash
-# Evaluate a single theory
-einstein-taste evaluate "A theory unifying gravity and electromagnetism through geometric means"
+# 评估单个理论
+einstein-taste evaluate "统一引力和电磁力的几何理论"
 
-# Evaluate at a specific year (temporal cutoff)
-einstein-taste evaluate "quantum field theory" --cutoff-year 1935
+# 指定年份（时间截止）
+einstein-taste evaluate "量子场论" --cutoff-year 1935
 
-# Rank multiple candidates
-einstein-taste rank "unified field theory" "probabilistic quantum mechanics" "hidden variable theory"
+# 排序多个候选理论
+einstein-taste rank "统一场论" "概率量子力学" "隐变量理论"
 
-# Compare two theories
-einstein-taste compare "special relativity" "Lorentz ether theory"
+# 比较两个理论
+einstein-taste compare "狭义相对论" "洛伦兹以太理论"
 
-# Run benchmark suite
+# 运行基准测试
 einstein-taste benchmark
-
-# Output as JSON
-einstein-taste evaluate "general covariance" --json-output
 ```
 
-### Python API Usage
+### Python API 使用
 
 ```python
 from einstein_taste.core.pipeline import TastePipeline
 
-# Create pipeline with built-in evidence
 pipeline = TastePipeline.default()
 
-# Evaluate a theory
+# 评估
 result = pipeline.evaluate(
-    "A deterministic hidden-variable theory underlying quantum mechanics",
+    "确定论的量子力学隐变量理论",
     cutoff_year=1935
 )
 pipeline.print_evaluation(result)
 
-# Rank multiple candidates
+# 排序
 ranked = pipeline.rank_candidates([
-    "Unified field theory combining gravity and electromagnetism",
-    "Probabilistic quantum theory with observer-dependent reality",
-    "Continuous field theory with strict locality",
+    "统一引力和电磁力的几何框架",
+    "观测者依赖的概率量子理论",
 ], cutoff_year=1945)
-
-# Compare two theories
-comparison = pipeline.compare(
-    "General relativity with general covariance",
-    "Nordstrom's scalar gravity theory",
-    cutoff_year=1915
-)
 ```
 
-### Claude Code Skill
+### 作为 Claude Code Skill 使用
 
 ```python
 from einstein_taste.skills.taste_skill import EinsteinTasteSkill
 
 skill = EinsteinTasteSkill()
 result = skill.evaluate_taste(
-    "A theory of quantum gravity preserving general covariance",
+    "通过广义协变性实现的量子引力理论",
     cutoff_year=1950
 )
-print(result)
 ```
 
-## Project Structure
+## 理解输出
 
 ```
-EinsteinResearchTaste/
-├── einstein_taste/                 # Main Python package
-│   ├── config/
-│   │   └── settings.py             # 8 taste axes, 4 periods, model config
-│   ├── core/
-│   │   ├── evidence.py             # Evidence data model + store + filtering
-│   │   ├── retriever.py            # RAG retrieval (keyword + semantic)
-│   │   ├── evaluator.py            # LLM-based axis evaluation + prompt engineering
-│   │   ├── taste_model.py          # Scoring model + weighted aggregation
-│   │   └── pipeline.py             # End-to-end orchestration
-│   ├── data/
-│   │   ├── seed_evidence.py        # 16 built-in evidence records
-│   │   ├── fetcher.py              # Fetch data from Wikipedia, SEP, etc.
-│   │   ├── loader.py               # Load/save evidence stores
-│   │   ├── raw/                    # Raw fetched data (JSON)
-│   │   └── processed/              # Processed evidence (JSON)
-│   ├── evaluation/
-│   │   └── benchmark.py            # 6 benchmark cases + metrics
-│   ├── agents/
-│   │   └── taste_agent.py          # Conversational agent interface
-│   ├── skills/
-│   │   └── taste_skill.py          # Claude Code skill wrapper
-│   ├── utils/
-│   │   └── formatting.py           # Output formatting utilities
-│   └── cli.py                      # Command-line interface
-├── tests/                          # 18 tests (all passing)
-├── scripts/
-│   ├── fetch_data.py               # Data fetching script
-│   ├── run_demo_offline.py         # Offline demo (no API key needed)
-│   └── enrich_evidence.py          # Add evidence from web sources
-├── docs/
-│   ├── literature_review.docx      # 44-reference literature review
-│   └── project_proposal.docx       # Technical proposal document
-├── .claude/skills/einstein-taste/
-│   └── SKILL.md                    # Claude Code skill definition
-├── pyproject.toml                  # Project configuration
-└── README.md                       # This file
-```
-
-## Understanding the Output
-
-When you evaluate a theory, you get:
-
-```
-======================================================================
 EINSTEIN RESEARCH TASTE EVALUATION
-======================================================================
-
-Candidate: A unified geometric framework combining gravity and EM...
+==================================================================
+Candidate: 统一引力和电磁力的几何框架...
 Cutoff Year: 1930
-Active Period: quantum_debates
-
 Overall Score: +0.522 (confidence: 0.50)
 
 --- Taste Axis Scores ---
-  unity                     +1.000 (conf: 0.70) [EVIDENCE]    <-- Evidence-based
-    Evidence-based: 4 evidence records support this score.
-  invariance                +1.000 (conf: 0.70) [EVIDENCE]
-  physical_reality          -0.100 (conf: 0.30) [INFERRED]    <-- Model inference
-    Inferred: No direct evidence found.
-
---- Evidence-Based Assessment ---
-Based on 5 evidence-grounded axis scores.
-
---- Model Inference (NOT historically grounded) ---
-3 axis scores are model inferences.
-
---- Caveats ---
-  ! This is a mock evaluation for demonstration purposes.
+  unity           +1.000 (conf: 0.70) [EVIDENCE]    <-- 有证据支持
+  invariance      +1.000 (conf: 0.70) [EVIDENCE]
+  physical_reality -0.100 (conf: 0.30) [INFERRED]   <-- 模型推断
 ```
 
-- **[EVIDENCE]** = Score is grounded in specific historical sources
-- **[INFERRED]** = Score is the model's inference, not directly supported
-- **Confidence** = How much evidence supports the score (0.0 to 1.0)
-- **Caveats** = Limitations and warnings
+- **[EVIDENCE]** = 有具体历史来源支持的评分
+- **[INFERRED]** = 模型推断，无直接证据
+- **confidence** = 支持证据的充分程度 (0.0-1.0)
 
-## Requirements
+## 项目结构
+
+```
+Einstein-Skill/
+├── einstein_taste/            # Python 包
+│   ├── config/settings.py     # 品味轴 + 时间段 + 配置
+│   ├── core/                  # 证据、检索、评估、评分、管道
+│   ├── data/                  # 数据加载、抓取、种子证据
+│   ├── evaluation/            # 基准测试
+│   ├── agents/                # 对话代理
+│   ├── skills/                # Claude Code Skill
+│   └── cli.py                 # 命令行工具
+├── tests/                     # 18个测试（全通过）
+├── scripts/                   # 演示和数据脚本
+├── docs/                      # 文献综述 + 项目方案 + 多语言README
+└── pyproject.toml             # 项目配置
+```
+
+## 环境要求
 
 - **Python** >= 3.10
-- **API Key** (optional): Anthropic (`ANTHROPIC_API_KEY`) or OpenAI (`OPENAI_API_KEY`)
-- Without an API key, the offline demo still works (uses keyword-based mock scoring)
+- **API Key**（可选）：Anthropic 或 OpenAI
+- 无 API Key 时可用离线演示
 
-## Key References
-
-This system is grounded in extensive historical scholarship:
+## 主要参考文献
 
 - Holton, G. (1973). *Thematic Origins of Scientific Thought*
 - Pais, A. (1982). *Subtle is the Lord*
 - Howard, D. (2004). "Einstein's Philosophy of Science" (Stanford Encyclopedia of Philosophy)
 - van Dongen, J. (2010). *Einstein's Unification*
-- Fine, A. (1986). *The Shaky Game*
-- Norton, J. (1984). "How Einstein Found His Field Equations"
 - Tong, J. et al. (2026). "AI Can Learn Scientific Taste" (arXiv:2603.14473)
 
-See `docs/literature_review.docx` for the full 44-reference review.
+完整44篇引用见 `docs/literature_review.docx`
 
-## License
+## 许可证
 
 MIT
